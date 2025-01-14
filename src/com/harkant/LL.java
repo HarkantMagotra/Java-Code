@@ -84,7 +84,7 @@ public class LL {
             size++;
             return temp;
         }
-        node.next = insertRec(val, index--, node.next);
+        node.next = insertRec(val, index - 1, node.next);
         return node;
     }
 
