@@ -9,6 +9,19 @@ public class LL {
         this.size = 0;
     }
 
+    public void reverse(Node node) {
+        if (node == tail) {
+            head = tail;
+            return;
+        }
+
+        reverse(node.next);
+
+        tail.next = node;
+        tail = node;
+        tail.next = null;
+    }
+
     public void display() {
         Node temp = head;
         while (temp != null) {
